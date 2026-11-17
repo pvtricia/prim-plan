@@ -9,6 +9,7 @@
     --color-accent: #A85F49;
     --color-beige: #D8CDBB;
     --color-muted: #77766E;
+    --color-highlight: #E8C547;
 
     --font-heading: 'Inter', sans-serif;
     --font-body: 'Inter', sans-serif;
@@ -66,10 +67,10 @@ a {
     font-weight: 500;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
     color: var(--color-accent);
-}
+    }
 
 .account-button {
     border-radius: 0;
@@ -373,21 +374,14 @@ a {
     font-size: 11px;
 }
 
-
 /* =================================
-   8. RESPONSIVE - TABLETĂ ȘI TELEFON
+   8. RESPONSIVE
+   Regulile pentru tabletă se aplică și pe telefon
+   (orice ecran sub 576px este și sub 992px).
 ================================= */
 
+/* TABLETĂ ȘI TELEFON (sub 992px) */
 @media (max-width: 991px) {
-
-    .hero-section {
-        padding: 65px 0 80px;
-    }
-
-    .hero-decoration {
-        margin-top: 80px;
-        justify-content: flex-start;
-    }
 
     .navbar-nav {
         gap: 5px;
@@ -397,94 +391,6 @@ a {
     .account-button {
         margin-bottom: 10px;
     }
-}
-
-
-@media (max-width: 575px) {
-
-    .navbar {
-        padding: 15px 0;
-    }
-
-    .navbar-brand {
-        font-size: 23px;
-    }
-
-    .hero-section {
-        padding: 55px 0 65px;
-    }
-
-    .hero-section h1 {
-        font-size: 49px;
-        letter-spacing: -1.5px;
-    }
-
-    .hero-description {
-        font-size: 14px;
-    }
-
-    .hero-frame {
-        width: 100%;
-        max-width: 250px;
-        height: 290px;
-        padding: 25px;
-        margin-top: 30px;
-    }
-
-    .frame-title {
-        font-size: 42px;
-    }
-
-    .movie-section {
-        padding: 55px 0;
-    }
-
-    .section-heading {
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .section-heading h2,
-    .collection-section h2 {
-        font-size: 31px;
-    }
-
-    .poster-title {
-        font-size: 23px;
-    }
-
-    .movie-card h3 {
-        font-size: 13px;
-    }
-
-    .collection-section {
-        padding: 65px 0;
-    }
-
-    .collection-card {
-        margin-top: 35px;
-        padding: 25px;
-    }
-
-    .footer-links {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 20px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-/* =================================
-   9. RESPONSIVE - AJUSTĂRI SUPLIMENTARE
-================================= */
-
-/* TABLETĂ */
-@media (max-width: 991px) {
 
     .hero-section {
         padding: 60px 0 70px;
@@ -505,18 +411,10 @@ a {
         height: 290px;
         padding: 25px;
     }
-
-    .navbar-nav {
-        gap: 5px;
-        padding: 15px 0;
-    }
-
-    .account-button {
-        margin-bottom: 10px;
-    }
 }
 
-/* TELEFON */
+
+/* TELEFON (sub 576px) */
 @media (max-width: 575px) {
 
     .navbar {
@@ -546,24 +444,12 @@ a {
         margin-top: 65px;
     }
 
-    .hero-frame {
-        width: 100%;
-        max-width: 250px;
-        height: 290px;
-        padding: 25px;
-    }
-
     .frame-title {
         font-size: 36px;
     }
 
     .frame-caption {
         font-size: 8px;
-    }
-
-    .btn-primary-custom {
-        padding: 13px 18px !important;
-        gap: 15px;
     }
 
     .movie-section {
@@ -611,18 +497,12 @@ a {
     }
 }
 
-/* TELEFOANE MICI */
+
+/* TELEFOANE MICI (sub 361px) */
 @media (max-width: 360px) {
 
     .hero-section h1 {
         font-size: 35px;
-    }
-
-    .hero-frame {
-        width: 100%;
-        max-width: 250px;
-        height: 290px;
-        padding: 25px;
     }
 
     .frame-title {

@@ -33,6 +33,19 @@ a {
     color: inherit;
 }
 
+/* Focus vizibil: contur galben când navighezi cu tasta Tab */
+a:focus-visible,
+.btn:focus-visible,
+.navbar-toggler:focus-visible {
+    outline: 3px solid var(--color-highlight);
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 
 /* =================================
    2. HEADER ȘI NAVIGAȚIE
@@ -76,6 +89,39 @@ a {
     border-radius: 0;
     font-size: 13px;
     padding: 10px 20px;
+}
+
+/* Lista derulantă din „Contul meu” */
+.navbar .dropdown {
+    width: fit-content;
+}
+
+.account-menu {
+    --bs-dropdown-spacer: 0;
+    min-width: 100%;
+    padding: 8px 0;
+    border: 1px solid var(--color-dark);
+    border-top: 0;
+    border-radius: 0;
+    background-color: var(--color-background);
+}
+
+.account-menu .dropdown-item {
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+
+.account-menu .dropdown-item:hover,
+.account-menu .dropdown-item:focus,
+.account-menu .dropdown-item:active {
+    background-color: var(--color-beige);
+    color: var(--color-dark);
+}
+
+.account-menu .dropdown-divider {
+    border-color: var(--color-beige);
 }
 
 
@@ -123,8 +169,8 @@ a {
 
 .hero-frame {
     position: relative;
-    width: 320px;
-    height: 370px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     margin-top: 30px;
     padding: 30px;
     background-color: var(--color-dark);
@@ -145,7 +191,7 @@ a {
 
 .frame-title {
     font-family: var(--font-heading);
-    font-size: 48px;
+    font-size: 35px;
     line-height: 1.05;
     font-weight: 600;
 }
@@ -198,16 +244,13 @@ a {
 .section-note {
     color: var(--color-muted);
     font-size: 14px;
+    margin-bottom: 35px;
 }
 
 
 /* =================================
    5. CARDURI DE FILME
 ================================= */
-
-.movie-card {
-    cursor: pointer;
-}
 
 .poster {
     position: relative;
@@ -256,6 +299,22 @@ a {
 
 .poster-four {
     background: #343B60;
+}
+
+.poster-five {
+    background: #4F6A6E;
+}
+
+.poster-six {
+    background: #7B5E7B;
+}
+
+.poster-seven {
+    background: #8C6A3F;
+}
+
+.poster-eight {
+    background: #3E4A3D;
 }
 
 .movie-card h3 {
@@ -379,6 +438,20 @@ a {
    Regulile pentru tabletă se aplică și pe telefon
    (orice ecran sub 576px este și sub 992px).
 ================================= */
+/* DESKTOP (de la 992px) */
+@media (min-width: 992px) {
+
+    /* Cadrul pornește de sus (nu centrat) și coboară
+       până la vârful literelor din titlul mare */
+    .hero-decoration {
+        align-self: flex-start;
+        margin-top: 48px;
+    }
+
+    .hero-frame {
+        margin-top: 0;
+    }
+}
 
 /* TABLETĂ ȘI TELEFON (sub 992px) */
 @media (max-width: 991px) {
@@ -388,8 +461,18 @@ a {
         padding: 15px 0;
     }
 
-    .account-button {
-        margin-bottom: 10px;
+    /* Butonul „Contul meu” de deasupra meniului */
+    .account-button-mobile {
+        display: block;
+        width: 100%;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Linia care desparte contul de meniu */
+    .account-button-mobile + .navbar-nav {
+        border-top: 1px solid var(--color-beige);
     }
 
     .hero-section {
@@ -406,10 +489,22 @@ a {
     }
 
     .hero-frame {
-        width: 100%;
-        max-width: 250px;
-        height: 290px;
         padding: 25px;
+    }
+
+    .collection-card {
+        margin-top: 35px;
+    }
+}
+
+
+/* SUB 768px: coloanele din footer stau una sub alta */
+@media (max-width: 767px) {
+
+    .footer-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 20px;
     }
 }
 
@@ -445,7 +540,7 @@ a {
     }
 
     .frame-title {
-        font-size: 36px;
+        font-size: 30px;
     }
 
     .frame-caption {
@@ -481,14 +576,7 @@ a {
 
     .collection-card {
         max-width: 100%;
-        margin-top: 35px;
         padding: 25px;
-    }
-
-    .footer-links {
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        margin-top: 20px;
     }
 
     .footer-bottom {
@@ -506,6 +594,6 @@ a {
     }
 
     .frame-title {
-        font-size: 32px;
+        font-size: 22px;
     }
 }

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -26,7 +25,7 @@
             <div class="container">
 
                 <a class="navbar-brand" href="index.html">
-                    PRIM-PLAN <span>.</span>
+                    PRIM-PLAN<span>.</span>
                 </a>
 
                 <button class="navbar-toggler" type="button"
@@ -40,9 +39,16 @@
 
                 <div class="collapse navbar-collapse" id="mainNavbar">
 
+                    <!-- Butonul contului pe telefon și tabletă (sub 992px): sus, deasupra meniului -->
+                    <a href="profil.html" class="btn btn-outline-dark account-button account-button-mobile d-lg-none">
+                        Contul meu
+                    </a>
+
+                    <!-- Meniul principal: paginile pentru toți utilizatorii -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>                        </li>
+                            <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>
+                        </li>
 
                         <li class="nav-item">
                             <a class="nav-link" href="catalog.html">Explorează</a>
@@ -51,20 +57,24 @@
                         <li class="nav-item">
                             <a class="nav-link" href="colectia-mea.html">Colecția mea</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="profil.html">Profil</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link" href="admin.html">Administrare</a>
-                        </li>
-
                     </ul>
 
-                    <a href="profil.html" class="btn btn-outline-dark account-button">
-                        Contul meu
-                    </a>
+                    <!-- Meniul contului: doar pe desktop (de la 992px) -->
+                    <div class="dropdown d-none d-lg-block">
+                        <button class="btn btn-outline-dark account-button dropdown-toggle"
+                            type="button"
+                            data-bs-toggle="dropdown"
+                            data-bs-display="static"
+                            aria-expanded="false">
+                            Contul meu
+                        </button>
+
+                        <ul class="dropdown-menu dropdown-menu-lg-end account-menu">
+                            <li><a class="dropdown-item" href="profil.html">Profil</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="index.html">Deconectare</a></li>
+                        </ul>
+                    </div>
 
                 </div>
             </div>
@@ -86,7 +96,9 @@
                         <h1>Ai filme în cap?<br>Mai bine pune-le<br>în colecție.</h1>
 
                         <p class="hero-description">
-                            Pentru toate titlurile salvate cu gândul „o să mă uit la ele cândva”.
+                            Pasiunea ta pentru filme, mereu în prim-plan. 
+                            Păstrează filmele pe care vrei să le vezi și 
+                            organizează-le pe cele pe care le-ai descoperit deja.
                         </p>
 
                         <a href="catalog.html" class="text-link">
@@ -98,8 +110,7 @@
 
                     <div class="col-lg-5 hero-decoration">
                         <div class="hero-frame">
-                            <span class="frame-number">01 / 26</span>
-                            <span class="frame-title">YOUR<br>NEXT<br>FAVORITE<br>FILM.</span>
+                            <span class="frame-title">YOUR NEXT<br>FAVORITE FILM.</span>
                             <span class="frame-caption">A COLLECTION OF YOUR OWN</span>
                         </div>
                     </div>
@@ -130,10 +141,10 @@
                         <article class="movie-card">
                             <div class="poster poster-one">
                                 <span class="poster-label">01</span>
-                                <span class="poster-title">PAST<br>LIVES</span>
+                                <span class="poster-title">THE DEVIL <br> WEARS PRADA</span>
                             </div>
-                            <h3>Past Lives</h3>
-                            <p>2023 · Dramă romantică</p>
+                            <h3>The Devil Wears Prada</h3>
+                            <p>2007 · Comedie, Dramă</p>
                         </article>
                     </div>
 
@@ -141,10 +152,10 @@
                         <article class="movie-card">
                             <div class="poster poster-two">
                                 <span class="poster-label">02</span>
-                                <span class="poster-title">PERFECT<br>DAYS</span>
+                                <span class="poster-title">EL CAMINO: <br>A BREAKING BAD <br> MOVIE </span>
                             </div>
-                            <h3>Perfect Days</h3>
-                            <p>2023 · Dramă</p>
+                            <h3>El Camino: A Breaking Bad Movie</h3>
+                            <p>2019 · Thriller, Crime</p>
                         </article>
                     </div>
 
@@ -152,10 +163,10 @@
                         <article class="movie-card">
                             <div class="poster poster-three">
                                 <span class="poster-label">03</span>
-                                <span class="poster-title">THE<br>GRAND<br>BUDAPEST</span>
+                                <span class="poster-title">THE<br>WOLVERINE</span>
                             </div>
-                            <h3>The Grand Budapest Hotel</h3>
-                            <p>2014 · Comedie</p>
+                            <h3>The Wolverine</h3>
+                            <p>2013 · Acțiune, SF</p>
                         </article>
                     </div>
 
@@ -163,10 +174,10 @@
                         <article class="movie-card">
                             <div class="poster poster-four">
                                 <span class="poster-label">04</span>
-                                <span class="poster-title">LA LA<br>LAND</span>
+                                <span class="poster-title">AVENGERS:<br>ENDGAME</span>
                             </div>
-                            <h3>La La Land</h3>
-                            <p>2016 · Musical, Dramă</p>
+                            <h3>Avengers: Endgame</h3>
+                            <p>2019 · Acțiune, SF</p>
                         </article>
                     </div>
 
@@ -181,14 +192,14 @@
                 <div class="row align-items-center">
 
                     <div class="col-lg-7">
-                        <p class="eyebrow">MAI MULT DECÂT UN CATALOG</p>
+                        <p class="eyebrow">COLECȚIA TA, ÎNTR-UN SINGUR LOC</p>
 
-                        <h2>Filmele tale,<br>într-un singur loc.</h2>
+                        <h2> Filmele tale merită un loc al lor.</h2>
 
                         <p>
-                            Unele filme merită revăzute. Altele abia așteaptă
-                            să fie descoperite. Organizează-le în colecția ta
-                            și păstrează-ți toate preferințele la îndemână.
+                            Unele filme merită revăzute. Altele abia așteaptă să fie descoperite. 
+                            Organizează-le în colecția ta și 
+                            ține-ți preferințele la un click distanță de tine.
                         </p>
 
                         <a href="colectia-mea.html" class="text-link">
@@ -215,7 +226,7 @@
                             </div>
 
                             <div class="collection-card-footer">
-                                FILMELE TALE. ALEGERILE TALE.
+                                GUSTURILE NU SE DISCUTĂ. SE NOTEAZĂ.
                             </div>
 
                         </div>
@@ -232,8 +243,8 @@
 
                 <div class="section-heading">
                     <div>
-                        <p class="eyebrow">PROASPĂT ADĂUGATE</p>
-                        <h2>Ultimele apariții în catalog</h2>
+                        <p class="eyebrow">CÂT ÎNCĂ SUNT CALDE</p>
+                        <h2>Ultimele apariții</h2>
                     </div>
 
                     <a href="catalog.html" class="text-link">
@@ -242,8 +253,57 @@
                 </div>
 
                 <p class="section-note">
-                    Descoperă titluri noi și găsește următorul film pentru lista ta.
+                   Ai loc pentru încă un film bun? Descoperă titluri noi 
+                   și alege ce intră în watchlist-ul tău.
                 </p>
+
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+                    <div class="col">
+                        <article class="movie-card">
+                            <div class="poster poster-five">
+                                <span class="poster-label">NOU</span>
+                                <span class="poster-title">SPIDER-MAN: <br> BRAND NEW DAY</span>
+                            </div>
+                            <h3>Spider-Man: Brand New Day</h3>
+                            <p>2026 · Acțiune, Dramă</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="movie-card">
+                            <div class="poster poster-six">
+                                <span class="poster-label">NOU</span>
+                                <span class="poster-title">THE<br>ODYSSEY</span>
+                            </div>
+                            <h3>The Odyssey</h3>
+                            <p>2026 · Aventură, Acțiune</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="movie-card">
+                            <div class="poster poster-seven">
+                                <span class="poster-label">NOU</span>
+                                <span class="poster-title">TOY <br> STORY 5</span>
+                            </div>
+                            <h3>Toy Story 5</h3>
+                            <p>2026 · Animație, Comedie, Aventură</p>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="movie-card">
+                            <div class="poster poster-eight">
+                                <span class="poster-label">NOU</span>
+                                <span class="poster-title">RESIDENT <BR> EVIL</span>
+                            </div>
+                            <h3>Resident Evil</h3>
+                            <p>2026 · Horror  </p>
+                        </article>
+                    </div>
+
+                </div>
 
             </div>
         </section>
@@ -280,7 +340,7 @@
     </footer>
 
 
-    <!-- Bootstrap JavaScript -->
+    <!-- Bootstrap JavaScript (necesar pentru meniul de pe telefon și pentru „Contul meu”) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>

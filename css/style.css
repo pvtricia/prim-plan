@@ -1,0 +1,631 @@
+
+/* =================================
+   1. VARIABILE ȘI STILURI GENERALE
+================================= */
+
+:root {
+    --color-background: #F1EBDD;
+    --color-dark: #292823;
+    --color-accent: #A85F49;
+    --color-beige: #D8CDBB;
+    --color-muted: #77766E;
+
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-hero: 'Inter', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-background);
+    color: var(--color-dark);
+    font-family: var(--font-body);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =================================
+   2. HEADER ȘI NAVIGAȚIE
+================================= */
+
+.navbar {
+    padding: 22px 0;
+    background-color: var(--color-background);
+}
+
+.navbar-brand,
+.footer-brand {
+    font-family: var(--font-heading);
+    font-size: 27px;
+    font-weight: 700;
+    color: var(--color-dark);
+    letter-spacing: -1px;
+}
+
+.navbar-brand span,
+.footer-brand span {
+    color: var(--color-accent);
+}
+
+.navbar-nav {
+    gap: 20px;
+}
+
+.nav-link {
+    color: var(--color-dark);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-accent);
+}
+
+.account-button {
+    border-radius: 0;
+    font-size: 13px;
+    padding: 10px 20px;
+}
+
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+.hero-section {
+    padding: 90px 0 110px;
+}
+
+.eyebrow {
+    color: var(--color-accent);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-section h1 {
+    font-family: var(--font-hero);
+    font-size: clamp(48px, 6vw, 76px);
+    font-weight: 600;
+    line-height: 1.08;
+    letter-spacing: -2px;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 490px;
+    color: var(--color-muted);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+
+/* Element decorativ din HERO */
+
+.hero-decoration {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.hero-frame {
+    position: relative;
+    width: 320px;
+    height: 370px;
+    margin-top: 30px;
+    padding: 30px;
+    background-color: var(--color-dark);
+    color: var(--color-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.frame-number {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 10px;
+    color: var(--color-beige);
+    letter-spacing: 2px;
+}
+
+.frame-title {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    line-height: 1.05;
+    font-weight: 600;
+}
+
+.frame-caption {
+    position: absolute;
+    bottom: 25px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: var(--color-beige);
+}
+
+
+/* =================================
+   4. SECȚIUNI ȘI TITLURI
+================================= */
+
+.movie-section {
+    padding: 75px 0;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.section-heading h2,
+.collection-section h2 {
+    font-family: var(--font-heading);
+    font-size: 38px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.text-link {
+    color: var(--color-accent);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.text-link:hover {
+    color: var(--color-dark);
+    text-decoration: none;
+}
+
+.section-note {
+    color: var(--color-muted);
+    font-size: 14px;
+}
+
+
+/* =================================
+   5. CARDURI DE FILME
+================================= */
+
+.movie-card {
+    cursor: pointer;
+}
+
+.poster {
+    position: relative;
+    aspect-ratio: 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover .poster {
+    transform: translateY(-6px);
+}
+
+.poster-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 11px;
+    color: #FFFFFF;
+    opacity: 0.8;
+}
+
+.poster-title {
+    font-family: var(--font-heading);
+    font-size: 29px;
+    line-height: 1.05;
+    text-align: center;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+.poster-one {
+    background: #6C8279;
+}
+
+.poster-two {
+    background: #B47B54;
+}
+
+.poster-three {
+    background: #9D5260;
+}
+
+.poster-four {
+    background: #343B60;
+}
+
+.movie-card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.movie-card p {
+    color: var(--color-muted);
+    font-size: 12px;
+    margin: 0;
+}
+
+
+/* =================================
+   6. COLECȚIA PERSONALĂ
+================================= */
+
+.collection-section {
+    padding: 90px 0;
+    background-color: var(--color-beige);
+}
+
+.collection-section h2 {
+    margin-bottom: 20px;
+}
+
+.collection-section p {
+    max-width: 480px;
+    color: var(--color-muted);
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.collection-card {
+    max-width: 360px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: var(--color-background);
+}
+
+.collection-card-header,
+.collection-card-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.collection-stat {
+    display: flex;
+    align-items: baseline;
+    gap: 15px;
+    padding: 25px 0;
+    border-bottom: 1px solid var(--color-beige);
+}
+
+.collection-stat strong {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 600;
+}
+
+.collection-stat span {
+    color: var(--color-muted);
+    font-size: 13px;
+}
+
+.collection-card-footer {
+    margin-top: 25px;
+    color: var(--color-accent);
+}
+
+
+/* =================================
+   7. FOOTER
+================================= */
+
+.site-footer {
+    padding: 55px 0 20px;
+    background-color: var(--color-dark);
+    color: var(--color-background);
+}
+
+.footer-brand {
+    color: var(--color-background);
+}
+
+.site-footer p {
+    margin-top: 10px;
+    color: var(--color-beige);
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+    font-size: 12px;
+}
+
+.footer-links a:hover {
+    color: var(--color-beige);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #55534C;
+    color: var(--color-beige);
+    font-size: 11px;
+}
+
+
+/* =================================
+   8. RESPONSIVE - TABLETĂ ȘI TELEFON
+================================= */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 65px 0 80px;
+    }
+
+    .hero-decoration {
+        margin-top: 80px;
+        justify-content: flex-start;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+        padding: 15px 0;
+    }
+
+    .account-button {
+        margin-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .hero-section {
+        padding: 55px 0 65px;
+    }
+
+    .hero-section h1 {
+        font-size: 49px;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-frame {
+        width: 100%;
+        max-width: 250px;
+        height: 290px;
+        padding: 25px;
+        margin-top: 30px;
+    }
+
+    .frame-title {
+        font-size: 42px;
+    }
+
+    .movie-section {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section-heading h2,
+    .collection-section h2 {
+        font-size: 31px;
+    }
+
+    .poster-title {
+        font-size: 23px;
+    }
+
+    .movie-card h3 {
+        font-size: 13px;
+    }
+
+    .collection-section {
+        padding: 65px 0;
+    }
+
+    .collection-card {
+        margin-top: 35px;
+        padding: 25px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* =================================
+   9. RESPONSIVE - AJUSTĂRI SUPLIMENTARE
+================================= */
+
+/* TABLETĂ */
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 60px 0 70px;
+    }
+
+    .hero-section h1 {
+        font-size: 56px;
+    }
+
+    .hero-decoration {
+        margin-top: 50px;
+        justify-content: flex-start;
+    }
+
+    .hero-frame {
+        width: 100%;
+        max-width: 250px;
+        height: 290px;
+        padding: 25px;
+    }
+
+    .navbar-nav {
+        gap: 5px;
+        padding: 15px 0;
+    }
+
+    .account-button {
+        margin-bottom: 10px;
+    }
+}
+
+/* TELEFON */
+@media (max-width: 575px) {
+
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .navbar-brand {
+        font-size: 23px;
+    }
+
+    .hero-section {
+        padding: 45px 0 60px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(36px, 9vw, 46px);
+        line-height: 1.12;
+        letter-spacing: -1.5px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .hero-decoration {
+        margin-top: 65px;
+    }
+
+    .hero-frame {
+        width: 100%;
+        max-width: 250px;
+        height: 290px;
+        padding: 25px;
+    }
+
+    .frame-title {
+        font-size: 36px;
+    }
+
+    .frame-caption {
+        font-size: 8px;
+    }
+
+    .btn-primary-custom {
+        padding: 13px 18px !important;
+        gap: 15px;
+    }
+
+    .movie-section {
+        padding: 50px 0;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section-heading h2,
+    .collection-section h2 {
+        font-size: 29px;
+    }
+
+    .poster-title {
+        font-size: 23px;
+    }
+
+    .movie-card h3 {
+        font-size: 13px;
+    }
+
+    .collection-section {
+        padding: 55px 0;
+    }
+
+    .collection-card {
+        max-width: 100%;
+        margin-top: 35px;
+        padding: 25px;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        margin-top: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* TELEFOANE MICI */
+@media (max-width: 360px) {
+
+    .hero-section h1 {
+        font-size: 35px;
+    }
+
+    .hero-frame {
+        width: 100%;
+        max-width: 250px;
+        height: 290px;
+        padding: 25px;
+    }
+
+    .frame-title {
+        font-size: 32px;
+    }
+}
